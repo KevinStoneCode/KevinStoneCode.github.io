@@ -120,6 +120,8 @@ pwa:
 
 paginate: 10
 
+# Enter your Liker ID to enable LikeCoin button
+liker_id: kevinstone0212
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:

@@ -77,9 +77,13 @@ $ bundle exec jekyll serve --force_polling
 ```
 
 ## 參考資料
-1. [安德魯的部落格 - Blogging as code](https://columns.chicken-house.net/2016/09/16/)
+1. [安德魯的部落格 - Blogging as code](https://columns.chicken-house.net/2016/09/16/blog-as-code/)
 2. [Win10 安裝 Jekyll 部落格網站產生器教學](https://blog.jaycetyle.com/2018/01/jekyll-on-win10/)
 3. [Jekyll](https://jekyllrb.com/docs/)
 4. [Jekyll Themes](http://jekyllthemes.org/)
 5. [什麼是 Windows 子系統 Linux 版](https://docs.microsoft.com/zh-tw/windows/wsl/about)
 6. [Jekyll on Windows 10 WSL2 with auto-regeneration](https://theta360developers.github.io/webapi/tester/2021/02/07/jekyll-on-wsl2.html)
+7. [使用Jekyll自架部落格](https://blog.wells.tw/posts/%E4%BD%BF%E7%94%A8Jekyll%E8%87%AA%E6%9E%B6%E9%83%A8%E8%90%BD%E6%A0%BC/)
+
+
+{% include likeco.html %}
