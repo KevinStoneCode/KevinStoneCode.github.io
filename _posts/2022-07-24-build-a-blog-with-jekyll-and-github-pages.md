@@ -22,21 +22,21 @@ tags: [blog, Jekyll, win10, Github Pages, WSL]
 
 ### 1. 安裝 Windows Subsystem for Linux
  這邊建議如果是 Windows 10 version 1607 以後的版本，推薦使用 [Windows Subsystem for Linux](https://docs.microsoft.com/zh-tw/windows/wsl/about)，安裝方式可以參考[這裡](https://docs.microsoft.com/zh-tw/windows/wsl/install)，打開系統管理員 PowerShell，輸入
-```console
+```powershell
 wsl --install
 ```
 安裝完輸入
-```console
+```powershell
 wsl -l -v
 ```
 會出現所有安裝的版本，如果你的作業系統版本比較舊，也可以參考[官方網站](https://jekyllrb.com/docs/installation/windows/)提供的其他方式來安裝 Jekyll。WSL 安裝完成後重新開機。
 
 ### 2. 打開 PowerShell 輸入 Bash 進入 Ubuntu Terminal
-```console
+```powershell
 Bash
 ```
 ### 3. 接著更新套件列表
-```console
+```bash
 $ sudo apt-get update -y && sudo apt-get upgrade -y
 ```
 ### 4. 安裝 Ruby
@@ -45,15 +45,15 @@ $ sudo apt-get update -y && sudo apt-get upgrade -y
 [ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 4, expected 1)](https://github.com/jekyll/jekyll/issues/8842)
 
 然後，照官方的步驟在更新 Ruby gems 會一直出現 `ERROR:  While executing gem ... (Gem::FilePermissionError)`，這邊花了許多時間在解決這個問題，因為實在是不熟 Linux，官方的步驟是沒有使用 `sudo`，但最後還是用 `sudo` 硬給他更新過去了。
-```console
+```bash
 $ sudo gem update
 ```
 ### 5. 安裝 Jekyll 和 bundler
-```console
+```bash
 $ sudo gem install jekyll bundler
 ```
 檢查有沒有安裝成功，看一下版本
-```console
+```bash
 $ jekyll -v
 ```
 有出現版本資訊就成功了
@@ -62,17 +62,17 @@ $ jekyll -v
 這邊可以照官方的方式 `new` 一個出來，或者去 google *Jekyll Theme*，就有很多好看的範本可以用了，例如[這個網站](http://jekyllthemes.org/)，裡面範本點進去都會有範本的使用方式，還會教你如何在 Github Pages 放上你的靜態網站。
 
 這邊以其中一個範本 [no style, please](http://jekyllthemes.org/themes/no-style-please/) 為例，一開始點擊 Homepage 進到他的 github，可以選擇用 git clone 下來，或是直接下載下來，然後使用 bash 進到資料夾內，在含有 Gemfile 檔案的那一層，輸入
-```console
+```bash
 $ bundle
 ```
 套件安裝完了之後，輸入
-```console
+```bash
 $ bundle exec jekyll serve
 ```
 便會在本機啟動你的部落格網站了。接著看到 Console 輸出中，Server address 的那一行(通常是 http://127.0.0.1:4000/)，貼到你的瀏覽器就可以進到網站了。
 
 最後補充一個 Tip，一般改完文章需要重啟你的 Jekyll 才能在本機網站看到更改後的樣子，如果不想一直重啟的話，在啟動網站時加入一個參數 `--force_polling` ，在修改完文章只需要重新整理瀏覽器便會看到最新的狀態了。
- ```console
+ ```bash
 $ bundle exec jekyll serve --force_polling
 ```
 
@@ -84,6 +84,5 @@ $ bundle exec jekyll serve --force_polling
 5. [什麼是 Windows 子系統 Linux 版](https://docs.microsoft.com/zh-tw/windows/wsl/about)
 6. [Jekyll on Windows 10 WSL2 with auto-regeneration](https://theta360developers.github.io/webapi/tester/2021/02/07/jekyll-on-wsl2.html)
 7. [使用Jekyll自架部落格](https://blog.wells.tw/posts/%E4%BD%BF%E7%94%A8Jekyll%E8%87%AA%E6%9E%B6%E9%83%A8%E8%90%BD%E6%A0%BC/)
-
 
 {% include likeco.html %}
